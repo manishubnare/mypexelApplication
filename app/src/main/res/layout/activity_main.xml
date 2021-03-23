@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/search"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp">
+
+        </ImageButton>
+
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="420dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="675dp"
+            android:background="@drawable/editbox"
+            android:paddingLeft="8dp"
+            android:hint="Search"
+            android:layout_marginRight="55dp"
+            android:layout_marginLeft="10dp"></EditText>
+
+        <FrameLayout
+            android:id="@+id/fragmentimage"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="350dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/search_button"
+            />
+
+
+        <ImageView
+            android:id="@+id/singleline"
+            android:layout_width="400dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/fragmentimage"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center_horizontal"
+            android:visibility="gone"
+            android:background="@drawable/planline">
+
+        </ImageView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            android:layout_below="@id/fragmentimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:background="#F0F3F6">
+
+            <ImageButton
+                android:id="@+id/prev_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:background="@drawable/prevbtn"
+                android:layout_marginLeft="20dp">
+
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/next_button"
+                android:layout_toEndOf="@+id/prev_button"
+                android:text="PAGE 1 OF 2"
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textSize="12dp"
+                android:layout_toLeftOf="@+id/next_button"
+                android:layout_toRightOf="@+id/prev_button">
+
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/next_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:background="@drawable/nextbtn"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true">
+
+            </ImageButton>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
